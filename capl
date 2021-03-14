@@ -99,18 +99,7 @@ on timer delay{
  output(myMsg4);
  }
  
-  /*
-  //if(this.dir != tx){
-   write("stepper motor status byte 0 = %d", this.byte(0));
-  write("stepper motor status byte 1 = %d", this.byte(1));
-  write("stepper motor status byte 2 = %d", this.byte(2));
-  write("stepper motor status byte 3 = %d", this.byte(3));
-  write("stepper motor status byte 4 = %d", this.byte(4));
-  write("stepper motor status byte 5 = %d", this.byte(5));
-  write("stepper motor status byte 6 = %d", this.byte(6));
-  write("stepper motor status byte 7 = %d", this.byte(7));
-  //}
-  */
+  
 
 
   
