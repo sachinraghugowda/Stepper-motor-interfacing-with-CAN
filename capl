@@ -47,46 +47,46 @@ on start{
 }
 
 
-on message CAN2.*{
+on message CAN2.*
+{
   
   if (j<=109000)
   {
 
-  if (this.byte(6)==0x01)
- {
+ 	 if (this.byte(6)==0x01)
+	 {
   
-     myMsg.DLC = 8;
-  myMsg.byte(0) = 0x7;
-  myMsg.byte(1) = 0x1; 
-  myMsg.byte(2) = 0x3;
-  myMsg.byte(3) = 0x11;
-  output(myMsg);
-    
-  myMsg2.DLC = 8;
-  myMsg2.byte(0) = 0x7;
-  myMsg2.byte(1) = 0x3; 
-  myMsg2.byte(2) = 0x1;
-  myMsg2.byte(3) = 0xD;
-  output(myMsg2);
-  
-   //i++;
-  
-  //setTimer (delay, 25);
-  
-    if(i<=109000)
-     {
-      setTimer (delay, 50);
-      write("number of turns =%d", i);
-     //write("PZD_408 = %d  (Fahrprofil Pause)", this.byte(6));
-      }
+	     myMsg.DLC = 8;
+	  myMsg.byte(0) = 0x7;
+	  myMsg.byte(1) = 0x1; 
+	  myMsg.byte(2) = 0x3;
+	  myMsg.byte(3) = 0x11;
+	  output(myMsg);
+
+	  myMsg2.DLC = 8;
+	  myMsg2.byte(0) = 0x7;
+	  myMsg2.byte(1) = 0x3; 
+	  myMsg2.byte(2) = 0x1;
+	  myMsg2.byte(3) = 0xD;
+	  output(myMsg2);
+
+	   //i++;
+
+	  //setTimer (delay, 25);
+
+	    if(i<=109000)
+	     {
+	      setTimer (delay, 50);
+	      write("number of turns =%d", i)
+	      }
 			
-  }
+	  }
    else
    {
      setTimer (delay1, 100);
     //output (myMsg4);
    }
-}
+ }
 }
 on timer delay{
  output(myMsg3);
